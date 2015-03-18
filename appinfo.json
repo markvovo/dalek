@@ -10,7 +10,7 @@
         "media": [
             {
                 "file": "images/daleksm.png",
-                "name": "dalek_background",
+                "name": "DALEK_BACKGROUND",
                 "type": "png"
             },
             {

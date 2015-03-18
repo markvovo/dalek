@@ -2,8 +2,8 @@
 
 static Window *window;
 static TextLayer *text_layer;
-//static BitmapLayer *s_image_layer;
-//static GBitmap *s_image_bitmap;
+static BitmapLayer *s_image_layer;
+static GBitmap *s_image_bitmap;
 
 static void select_click_handler(ClickRecognizerRef recognizer, void *context) {
   text_layer_set_text(text_layer, "Exterminate");
@@ -29,12 +29,12 @@ static void click_config_provider(void *context) {
 static void window_load(Window *window) {
   Layer *window_layer = window_get_root_layer(window);
  GRect bounds = layer_get_bounds(window_layer);
- // s_image_bitmap = gbitmap_create_with_resource(dalek_background);
+  s_image_bitmap = gbitmap_create_with_resource(RESOURCE_ID_DALEK_BACKGROUND);
 
-//  s_image_layer = bitmap_layer_create(bounds);
-//  bitmap_layer_set_bitmap(s_image_layer, s_image_bitmap);
-//  bitmap_layer_set_alignment(s_image_layer, GAlignCenter);
-//  layer_add_child(window_layer, bitmap_layer_get_layer(s_image_layer));
+  s_image_layer = bitmap_layer_create(bounds);
+  bitmap_layer_set_bitmap(s_image_layer, s_image_bitmap);
+  bitmap_layer_set_alignment(s_image_layer, GAlignCenter);
+  layer_add_child(window_layer, bitmap_layer_get_layer(s_image_layer));
 	
   text_layer = text_layer_create((GRect) { .origin = { 0, 72 }, .size = { bounds.size.w, 20 } });
   //text_layer = text_layer_create((GRect) { .origin = { 0, 72 }, .size = { 70, 120 } });
@@ -45,8 +45,8 @@ static void window_load(Window *window) {
 }
 
 static void window_unload(Window *window) {
- // bitmap_layer_destroy(s_image_layer);
- // gbitmap_destroy(s_image_bitmap);
+  bitmap_layer_destroy(s_image_layer);
+  gbitmap_destroy(s_image_bitmap);
 
   text_layer_destroy(text_layer);
 }
