@@ -1,0 +1,24 @@
+{
+    "appKeys": {},
+    "capabilities": [
+        ""
+    ],
+    "companyName": "markvovo",
+    "longName": "Darlek Control",
+    "projectType": "native",
+    "resources": {
+        "media": []
+    },
+    "sdkVersion": "3",
+    "shortName": "Darlek",
+    "targetPlatforms": [
+        "aplite",
+        "basalt"
+    ],
+    "uuid": "01278eec-8480-431c-a976-a2b77fe63c3a",
+    "versionCode": 1,
+    "versionLabel": "1.0",
+    "watchapp": {
+        "watchface": false
+    }
+}
