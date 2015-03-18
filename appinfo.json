@@ -4,13 +4,25 @@
         ""
     ],
     "companyName": "markvovo",
-    "longName": "Darlek Control",
+    "longName": "Dalek Control",
     "projectType": "native",
     "resources": {
-        "media": []
+        "media": [
+            {
+                "file": "images/daleksm.png",
+                "name": "dalek_background",
+                "type": "png"
+            },
+            {
+                "file": "images/dalek_bw.png",
+                "menuIcon": true,
+                "name": "DALEK_BW",
+                "type": "png"
+            }
+        ]
     },
     "sdkVersion": "3",
-    "shortName": "Darlek",
+    "shortName": "Dalek Control",
     "targetPlatforms": [
         "aplite",
         "basalt"
